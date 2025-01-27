@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background: linear-gradient(90deg, #241d39, #3a1ba2);
+}
+
+
+
+.container {
+    width: 50em;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock {
+    width: 100%;
+    height: 100%;
+    background: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.stopwatch {
+    width: 100%;
+    height: 100%;
+    background: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+   
+}
+.span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    
+}
+
+.container::before {
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #49dbc8;
+    border-radius: 5px;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+}
+
+.container::after {
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #d2fd23;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    z-index: -1;
+}
+
+.clock span {
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    padding: 0 10px;
+   
+}
+.stopwatch span {
+    font-size: 40px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    left: 10%;
+}
+
+.clock span::after,
+.stopwatch span::after {
+    font-size: 16px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hrs::after {
+    content: "Hours";
+}
+
+#min::after {
+    content: "MINUTES";
+}
+
+#sec::after {
+    content: "SECONDS";
+}
+
+#stopwatch-hrs::after {
+    content: "Hours";
+}
+
+#stopwatch-min::after {
+    content: "MINUTES";
+}
+
+#stopwatch-sec::after {
+    content: "SECONDS";
+}
+
+#stopwatch-ms::after {
+    content: "MILLISECONDS";
+}
+
+#clock-btn,
+#stopwatch-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.stopwatch-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: row;
+    margin-top: 110px;
+    margin-right: 50px;
+}
+
+.stopwatch-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+   
+    color: white;
+    cursor: pointer;
+}
+
